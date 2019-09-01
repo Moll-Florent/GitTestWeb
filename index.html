@@ -519,12 +519,35 @@ nav ul li {
     <p class="tagline">Light is a simple one page website</p>
   </section>
   <!-- About Section -->
-  <section class="about" id="about">
-    <h2 class="hidden">About</h2>
-    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-  </section>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>FeedEk jQuery RSS/ATOM Feed Plugin Demo | jQuery RSS/ATOM Parser Plugin FeedEk Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://momentjs.com/downloads/moment-with-langs.min.js"></script>
+  <script src="js/FeedEk.js"></script>
+  <link href="css/FeedEk.css" rel="stylesheet" type="text/css" />
+  <style>
+    body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;background-color: #efefef;font-size: 13px;line-height: 17px !important; }
+    .rssDiv{float: left;padding-right: 35px;}
+    ul{width: 300px !important;}
+  </style>
+</head>
+<body>
+  <h1>Le Monde - A la Une</h1>
+  <div id="divRss"></div>
+  <script>
+    $(document).ready(function () {
+        $('#divRss').FeedEk({
+            FeedUrl: 'https://www.snowsurf.com/feed/all',
+            MaxCount: 3
+        });
+    });
+  </script>
+</body>
+</html>
+
   <!-- Stats Gallery Section -->
   <div class="gallery">
     <div class="thumbnail">
